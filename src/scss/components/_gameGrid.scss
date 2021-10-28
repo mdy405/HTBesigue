@@ -1,0 +1,103 @@
+@mixin gameGrid {
+  .gameGrid {
+    color: white;
+    width: 100%;
+    background-color: darkolivegreen;
+    height: 55vh;
+    border-radius: 0.5rem;
+    /*display: flex;
+    flex-direction: row;
+    justify-content: space-between;*/
+    &__container {
+      display: flex;
+      height: 100%;
+      justify-content: space-between;
+      flex-direction: column;
+      &__info {
+        display: flex;
+        justify-content: start;
+        flex-direction: row;
+        width: 100%;
+        padding: 1.5rem;
+        /*display: grid;
+        grid-template-columns: 1fr 1fr;*/
+        gap: 2rem;
+        .infoOpp {
+          width: 60%;
+          //display: flex;
+        }
+        .infoFlip {
+          width: 40%;
+          @include marker;
+        }
+      }
+      &__played {
+        display: flex;
+        justify-content: start;
+        flex-direction: row;
+        width: 100%;
+        padding: 1.5rem;
+        /*display: grid;
+        grid-template-columns: 1fr 1fr;*/
+        gap: 2rem;
+        /*background-color: rgb(255, 0, 64);
+        height: 10rem;
+        width: 10rem;*/
+        //left: 15rem;
+        //top: 2rem;
+        //transform: rotate(60deg);
+        .played {
+          width: 60%;
+          display: flex;
+          justify-content: center;
+
+          .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 15rem;
+            width: 30rem;
+            //background-color: rgb(255, 0, 64);
+            .playedCard {
+              font-size: 20pt;
+              position: relative;
+              width: 3.75em;
+              height: 5em;
+              float: left;
+              margin-right: 0.5em;
+              margin-bottom: 0.5em;
+              box-shadow: 0 1px 2px 0 rgba(6, 7, 15, 0.938);
+            }
+          }
+
+          //left: 15rem;
+          //top: 2rem;
+          //transform: rotate(60deg);
+        }
+      }
+      &__info2 {
+        display: flex;
+        justify-content: start;
+        flex-direction: row;
+        //margin-top: 20rem;
+        padding: 1.5rem;
+        /*display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;*/
+        width: 100%;
+        padding: 1.5rem;
+        /*display: grid;
+        grid-template-columns: 1fr 1fr;*/
+        gap: 2rem;
+        .infoOpp {
+          width: 60%;
+          //display: flex;
+        }
+        .infoFlip {
+          width: 40%;
+          @include marker;
+        }
+      }
+    }
+  }
+}

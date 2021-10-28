@@ -1,0 +1,32 @@
+@mixin marker {
+  .marker {
+    display: flex;
+    height: 10rem;
+    width: 15rem;
+    border-radius: 12px;
+    background-image: url("../../assets/wood3.jpg");
+    gap: 2rem;
+    padding: 0.5rem;
+    box-shadow: 5px 10px rgba(2, 15, 27, 0.13);
+    @include switch;
+    .switch__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &__boxGroup {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        .container__box100 {
+          display: flex;
+          transform: rotate(270deg);
+        }
+        //
+      }
+      &__box50 {
+        display: flex;
+        // transform: rotate(180deg);
+      }
+    }
+  }
+}
